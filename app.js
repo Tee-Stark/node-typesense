@@ -1,6 +1,7 @@
 const express = require('express')
 const client = require('./typesense/config')
 const { createAlias } = require('./typesense/aliasHandler')
+require('./typesense/carsCollection')
 
 const app = express()
 

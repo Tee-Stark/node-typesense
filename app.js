@@ -1,7 +1,7 @@
 const express = require('express')
 const client = require('./typesense/config')
 const { createAlias } = require('./typesense/aliasHandler')
-require('./typesense/carsCollection')
+//quire('./typesense/carsCollection')
 
 const app = express()
 
@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 // create an alias 'cars' to point to the old_cars collection
-createAlias('cars', 'old_cars')
+createAlias('cars', 'new_cars')
 	.then(data => console.log(`new alias ${data} created`))
 	.catch(err => {
 		console.error(err)

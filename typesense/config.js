@@ -8,7 +8,7 @@ const tsClient = new Typesense.Client({
     	protocol: 'https'
 	}],
 	apiKey: '67WJyBElQuNZAtFQbmncyBg3uCAboVVK',
-	connectionTimeoutSeconds: 5
+	connectionTimeoutSeconds: 10
 })
 
 module.exports = tsClient

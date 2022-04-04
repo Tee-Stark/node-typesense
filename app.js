@@ -8,7 +8,12 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 // create an alias 'cars' to point to the old_cars collection
-await createAlias('cars', 'old_cars')
+createAlias('cars', 'old_cars')
+	.then(data => console.log(`new alias ${data} created`))
+	.catch(err => {
+		console.error(err)
+		throw new Error(err)
+	})
 
 // a sample 'search collection' route
 app.get('/search', async(req, res) => {
@@ -26,7 +31,7 @@ app.get('/search', async(req, res) => {
 			.search(searchObject)
 			.then(results => {
 			  res.status(200).json({
-				message: 'success'
+				message: 'success',
 				data: results
 			  })
 			})

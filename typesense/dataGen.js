@@ -1,4 +1,4 @@
-const { faker } = require('faker')
+const { faker } = require('@faker-js/faker')
 const client = require('./config.js')
 
 // to generate dummy data for cars using faker
@@ -18,12 +18,14 @@ const generateCar = (type, collectionName) => {
 		.then(result => {
 			// send a response containing the new car document created
 			console.log(result)
-	}, err => {
-		console.error(err)
-	})
+		}, err => {
+			console.error(err)
+		})
+	}
 }
 
 // to generte for old cars
 generateCar('old', 'old_cars')
 // to generate for new cars
 generateCar('new', 'new_cars')
+

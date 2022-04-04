@@ -52,7 +52,8 @@ app.post('/add-car', async (req, res) => {
 				message: 'success',
 				data: result
 			})
-	} catch (err){
+		})
+	} catch(err) {
 		res.status(500).json(err)
 	}
 })

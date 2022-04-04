@@ -9,7 +9,7 @@ const generateCar = (type, collectionName) => {
 			name: faker.vehicle.vehicle(),
 			manufacturer: faker.vehicle.manufacturer(),
 			color: faker.vehicle.color(),
-			year: type === 'old' ? faker.date.between('1960-01-01T00:00:00.000Z', '2000-01-01T00:00:00.000Z') : faker.date.between('2000-01-01T00:00:00.000Z', '2025-01-01T00:00:00.000Z')
+			year: type === 'old' ? faker.date.between('1960-01-01T00:00:00.000Z', '2000-01-01T00:00:00.000Z').getFullYear() : faker.date.between('2000-01-01T00:00:00.000Z', '2025-01-01T00:00:00.000Z').getFullYear()
 		}
 		// add the generated car to the collection
 		client.collections(collectionName)

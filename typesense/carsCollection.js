@@ -6,7 +6,7 @@ const oldCarsSchema = {
 		{'name': 'name', 'type': 'string'}, // car name
 		{'name': 'manufacturer', 'type': 'string', 'facet': true}, // car manufacturer
 		{'name': 'color', 'type': 'string'}, // car color
-		{'name': 'year', 'type': 'int64', 'facet': true}, // year of manufacturing
+		{'name': 'year', 'type': 'int32', 'facet': true}, // year of manufacturing
 	],
 }
 
@@ -25,7 +25,7 @@ const newCarsSchema = {
 		{'name': 'name', 'type': 'string'}, // car name
 		{'name': 'manufacturer', 'type': 'string', 'facet': true}, // car producer
 		{'name': 'color', 'type': 'string'}, // car color
-		{'name': 'year', 'type': 'int64', 'facet': true}, // year of manufacturing
+		{'name': 'year', 'type': 'int32', 'facet': true}, // year of manufacturing
 	],
 }
 

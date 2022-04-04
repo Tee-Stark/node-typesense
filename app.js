@@ -23,7 +23,7 @@ app.get('/search', async(req, res) => {
 		// an object to hold the search parameters
 		const searchObject = {
 			'q': q,
-			'query_by': 'name',
+			'query_by': 'name, manufacturer',
 			'sort_by': 'year:desc'
 		}
 		

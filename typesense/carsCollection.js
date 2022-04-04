@@ -4,7 +4,7 @@ const oldCarsSchema = {
 	'name': 'old_cars',  // collection name
 	'fields': [
 		{'name': 'name', 'type': 'string'}, // car name
-		{'name': 'producer', 'type': 'string', 'facet': true}, // car producer
+		{'name': 'manufacturer', 'type': 'string', 'facet': true}, // car manufacturer
 		{'name': 'color', 'type': 'string'}, // car color
 		{'name': 'year', 'type': 'int32', 'facet': true}, // year of manufacturing
 	],
@@ -23,7 +23,7 @@ const newCarsSchema = {
 	'name': 'new_cars',  // collection name
 	'fields': [
 		{'name': 'name', 'type': 'string'}, // car name
-		{'name': 'producer', 'type': 'string', 'facet': true}, // car producer
+		{'name': 'manufacturer', 'type': 'string', 'facet': true}, // car producer
 		{'name': 'color', 'type': 'string'}, // car color
 		{'name': 'year', 'type': 'int32', 'facet': true}, // year of manufacturing
 	],

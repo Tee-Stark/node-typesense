@@ -22,11 +22,11 @@ app.get('/search', async(req, res) => {
 		// an object to hold the search parameters
 		const searchObject = {
 			'q': q,
-			'query_by': 'producer',
+			'query_by': 'name',
 			'sort_by': 'year:desc'
 		}
 		
-		await client.collections('cars')
+		client.collections('cars')
 			.documents()
 			.search(searchObject)
 			.then(results => {

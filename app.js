@@ -26,7 +26,7 @@ app.get('/search', async(req, res) => {
 			'sort_by': 'year:desc'
 		}
 		
-		client.collections('cars')
+		await client.collections('cars')
 			.documents()
 			.search(searchObject)
 			.then(results => {
@@ -40,6 +40,22 @@ app.get('/search', async(req, res) => {
 	}
 })
 // a sample 'add to collection' route
+app.post('/add-car', async (req, res) => {
+	try {
+		const car = req.body
+		client.collections('cars')
+		.documents()
+		.create(car)
+		.then(result => {
+			// send a response containing the new car document created
+			res.status(200).json({
+				message: 'success',
+				data: result
+			})
+	} catch (err){
+		res.status(500).json(err)
+	}
+})
 
 
 const port = 3000
